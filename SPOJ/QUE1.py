@@ -1,3 +1,4 @@
+'''This program should run in Python 3.4'''
 class QUE1():
     def __init__(self, height , count):
         self.H = height
@@ -34,14 +35,15 @@ def GetOrder(people):
             c = c - 1
     return people1
 
-T = int(raw_input())
+T = int(input())
 while T > 0:
-    n = raw_input()
-    heights = raw_input().split()
-    counts = raw_input().split()
+    n = input()
+    heights = input().split()
+    counts = input().split()
     people = []
     for h,c in zip(heights , counts):
         people.append(QUE1(int(h) , int(c)))
     for p in GetOrder(people):
-        print(p.H),
+        print(p.H , end=' ')
+    print()
     T = T - 1
